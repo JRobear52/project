@@ -6,10 +6,12 @@ if len(sys.argv) == 1:
 	print 'Error: No arguments given.'
 	sys.exit()
 
-# This loop sums the arguments
+# This loop sums numbers in a file, only one number per line
 sum = 0
-for num in sys.argv[1:]:
+n = 0
+for num in open( sys.argv[1]):
     sum += float(num)
+    n += 1
 
 # this prints the mean value
-print sum / (len(sys.argv) - 1)
+print sum / n
